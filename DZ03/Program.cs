@@ -21,14 +21,6 @@ int getNumberFromUser(string userInformation)
     return result;
 }
 
-int userNumber = getNumberFromUser("Введите натуральное число от 1 до 99: ");
-int[] array = new int[userNumber];
-for (int i = 0; i < array.Length; i++)
-{
-    array[i] = new Random().Next(0, 2);
-}
-printArray(array);
-
 void printArray(int[] array)
 {
     Console.Write("[");
@@ -42,3 +34,10 @@ void printArray(int[] array)
     }
     Console.Write("]");
 }
+int userNumber = getNumberFromUser("Введите натуральное число: ");
+int[] array = new int[userNumber];
+for (int i = 0; i < array.Length; i++)
+{
+    array[i] = new Random().Next(1, 99);
+}
+printArray(array);
