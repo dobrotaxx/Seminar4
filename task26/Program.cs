@@ -7,5 +7,10 @@
 
 Console.WriteLine("Введите число: ");
 int userNumber = Convert.ToInt32(Console.ReadLine());
-int result = (int)Math.Log10(userNumber) + 1;
+userNumber = Math.Abs(userNumber);//Берем число по модулю
+int result = 1;
+if (userNumber != 0)
+{
+    result = (int)Math.Log10(userNumber) + 1;
+}
 Console.WriteLine($"Количество знаков в числе {result}");
